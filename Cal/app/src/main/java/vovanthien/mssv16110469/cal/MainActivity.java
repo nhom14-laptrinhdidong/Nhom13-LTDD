@@ -156,22 +156,23 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 tInput.append(")");
                 break;
             case R.id.btnDelete:
-                String temp= delete(tInput.getText().toString());
-                tInput.setText(temp);
+                if(tInput.length()!=0){
+                    String temp= delete(tInput.getText().toString());
+                    tInput.setText(temp);
+                    tResult.setText("");
+                }
                 break;
             case R.id.btnDeleteAll:
                 tInput.setText("");
+                tResult.setText("");
                 break;
             case  R.id.btnDot:
                 tInput.append(".");
                 break;
             case R.id.btnEqualsSign:
-                DecimalFormat df=new DecimalFormat("########.########");
-                String sMath = tInput.getText().toString();
-                PostFixConverter pc = new PostFixConverter(sMath);
-                PostFixCalculator calc = new PostFixCalculator(pc.getPostfixAsList());
-                String result = calc.result().toString();
-                tResult.setText(result);
+                DecimalFormat df =new DecimalFormat("########.########");
+                String getResult = getResult();
+                tResult.setText(getResult);
                 break;
         }
     }
@@ -181,6 +182,25 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         int length=s.length();
         String temp= s.substring(0,length-1);
         return temp;
+    }
+    public String getResult(){
+        String result;
+        try {
+            String sMath = tInput.getText().toString();
+            PostFixConverter pc = new PostFixConverter(sMath);
+            PostFixCalculator calc = new PostFixCalculator(pc.getPostfixAsList());
+            result = calc.result().toString();
+            if(result!=""){
+            }
+            else {
+                result="Error :) ";
+            }
+        }
+        catch(Exception ex){
+            result="System Error :) " + ex;
+            ex.printStackTrace();
+        }
+        return result;
     }
     //Chứa các kí tự +,-,*,/,(,)
     public ArrayList<String> arrOperation;
