@@ -13,6 +13,19 @@ public class PostFixCalculator {
 
     public PostFixCalculator(List<String> postfix) {expression = postfix;}
 
+    public String clearResultText(String result){
+        int i = result.length();
+        while (i>=0){
+            if(result.charAt(i)==45){
+                result = result.substring(0,i-1);
+            }
+            else {
+                break;
+            }
+        }
+        return  result;
+    }
+
     public double resultSquared(double number, double sqrNumber){
         double result = 1;
         for(int i = 0 ; i < sqrNumber; i++){

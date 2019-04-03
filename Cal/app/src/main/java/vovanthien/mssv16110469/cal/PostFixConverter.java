@@ -23,7 +23,6 @@ public class PostFixConverter {
         infix = expression;
         convertExpression();
     }
-
     /* Nếu là số thì đẩy bào chuỗi postfix, nếu là toán tử thì đẩy vào stack*/
     private void convertExpression()
     {
