@@ -1,24 +1,74 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/pop_bg"
     tools:context=".PopupActivity">
+    <LinearLayout
 
-    <Button
-        android:id="@+id/btnBack"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Back"
-        tools:layout_editor_absoluteX="152dp"
-        tools:layout_editor_absoluteY="667dp" />
+        android:orientation="vertical"
+        android:padding="8dp">
 
-    <android.support.v7.widget.CardView
-        android:layout_width="395dp"
-        android:layout_height="wrap_content"
-        tools:layout_editor_absoluteX="8dp"
-        tools:layout_editor_absoluteY="230dp" />
+        <TextView
+            android:layout_marginLeft="110dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:minHeight="48dp"
+            android:text="Nhóm 13"
+            android:textStyle="italic"
+            android:textSize="24sp"/>
 
-</android.support.constraint.ConstraintLayout>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:minHeight="48dp"
+            android:textStyle="bold"
+            android:text="Đinh Quang Nam      16110392"
+            android:textSize="24sp" />
+        <TextView
+
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:minHeight="48dp"
+            android:textStyle="bold"
+            android:text="Võ Văn Thiên             16110469"
+            android:textSize="24sp" />
+        <TextView
+
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:minHeight="48dp"
+            android:textStyle="bold"
+            android:text="Nguyễn Hữu Thiện    16110472"
+            android:textSize="24sp" />
+        <TextView
+
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:minHeight="48dp"
+            android:textStyle="bold"
+            android:text="Huỳnh Văn Triển        12110203"
+            android:textSize="24sp" />
+        <Button
+            android:layout_marginTop="50dp"
+            android:layout_marginLeft="110dp"
+            android:gravity="center"
+            android:id="@+id/btnBack"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Back"
+            android:textStyle="bold"
+            tools:layout_editor_absoluteX="152dp"
+            tools:layout_editor_absoluteY="667dp" />
+    </LinearLayout>
+
+</LinearLayout>
